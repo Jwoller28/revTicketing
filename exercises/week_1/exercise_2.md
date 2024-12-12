@@ -1,7 +1,5 @@
 # Exercise 2: List Registered Students with JavaScript
 
-### Exercise 2: List Registered Students Using JavaScript
-
 In this exercise, you will build functionality to display a list of registered students dynamically using JavaScript. This will help you practice working with arrays, DOM manipulation, and event handling in JavaScript.
 
 ---
