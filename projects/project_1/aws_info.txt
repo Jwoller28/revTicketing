@@ -1,0 +1,12 @@
+Link to aws:
+
+https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#database:id=database-1;is-cluster=false
+
+my specific endpoint:
+
+database-1.c38o6ameavms.us-east-1.rds.amazonaws.com
+
+Port:
+
+5432
+

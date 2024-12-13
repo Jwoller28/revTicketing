@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form id="student-form">
+        <h3>Personal details</h3>
+        <fieldset>
+            <label for="fname">Full Name:</label>
+            <br>
+            <input type="text" id="fname" name="fname" required>
+            <br><br>       
+            
+            <label for="email">Email:</label>
+            <br>
+            <input type="text" id="email" name="email" required>
+            <br><br>
+
+            <label for="pnumber">Phone Number:</label>
+            <br>
+            <input type="text" id="pnumber" name="pnumber" required>
+            <br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <br>
+            <input type="text" id="dob" name="dob">
+            <br>
+        </fieldset>
+
+        <br><br>
+        <h3>Academic details</h3> 
+        <fieldset>
+            <lp>Select Program:</label><br>
+            <select name="program" id="program">
+                <option value="none">Select</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Mathematics">Mathematics</option>
+            </select>
+            <br><br>
+
+            <p>Choose your year of study:</p>
+            <input type="radio" id="first" name="year" value="First Year">
+            <label for="first">First Year</label><br>
+            <input type="radio" id="second" name="year" value="Second Year">
+            <label for="second">Second Year</label><br>
+            <input type="radio" id="third" name="year" value="Third Year">
+            <label for="third">Third Year</label><br>
+            <input type="radio" id="fourth" name="year" value="Fourth Year">
+            <label for="fourth">Fourth Year</label><br>
+            <br>
+
+            <p>Skills (Check all that apply):</p>
+            <input type="checkbox" id="programming" name="programming" value="Programming">
+            <label for="programming">Programming</label><br>
+            
+            <input type="checkbox" id="analysis" name="analysis" value="Analysis">
+            <label for="analysis">Data Analysis</label><br>
+        
+            <input type="checkbox" id="design" name="design" value="Design">
+            <label for="design">Design</label><br>
+        
+            <input type="checkbox" id="communication" name="communication" value="Communication">
+            <label for="Communication">Communication</label><br>
+        </fieldset>
+    
+        
+        <br>
+        <input type="submit" value="Add Student">
+        <button type="button" id="reset-list">Reset List</button> 
+    </form>
+
+    <!-- Section to Display the Student List -->
+    <div class="student-list">
+        <h2>Registered Students</h2>
+        <ul id="students">
+            <!-- List of registered students will be dynamically added here -->
+        </ul>
+    </div>
+
+
+
+    <!-- Link to external JavaScript file -->
+    <script src="student_registration.js"></script>
+</body>
+</html>
