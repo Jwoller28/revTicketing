@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../Context/UserContext";
 
 function NavBar() {
+
+  const {isAuthenticated} = useAuth();
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -52,6 +55,14 @@ function NavBar() {
                   Login
                 </Link>
               </li>
+              {
+                isAuthenticated && 
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/dashboard">
+                      Dashboard
+                    </Link>
+                  </li>
+              }
             </ul>
           </div>
         </div>
