@@ -1,0 +1,52 @@
+Creates a new user with "EMPLOYEE" as the default role.
+POST http://localhost:8080/auth/register
+{
+    "username": " ",
+    "password": " "
+}
+
+
+Logs in a user and verifies credentials.
+POST http://localhost:8080/auth/login
+{
+    "username": " ",
+    "password": " "
+}
+
+
+PATCH http://localhost:8080/auth/promote/{id}
+
+
+
+Employees can submit a ticket for reimbursement.
+POST http://localhost:8080/tickets/submit
+{
+    "userId": " ",
+    "amount": " ",
+    "description": " "
+}
+userId (int)
+amount (double)
+description (String)
+
+
+Managers can view all tickets with a "PENDING" status.
+GET http://localhost:8080/tickets/pending
+Request Attribute: currentUser (User, must have role = MANAGER)
+Response: List of pending tickets.
+Process a ticket (Approve or Deny - Managers only):
+
+PATCH http://localhost:8080/tickets/{id}/{action}
+Description: Managers can approve or deny a ticket.
+Path Variables:
+id (int): Ticket ID.
+action (String): Either approve or deny.
+Request Attribute: currentUser (User, must have role = MANAGER)
+Response: The updated ticket.
+View tickets for a specific user:
+
+GET http://localhost:8080/tickets/user/{userId}
+Description: Employees can view their submitted tickets. Managers can view any user's tickets.
+Path Variable:
+userId (int)
+Request Attribute: currentUser (User)
