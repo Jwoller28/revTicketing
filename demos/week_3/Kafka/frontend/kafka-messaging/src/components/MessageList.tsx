@@ -4,14 +4,14 @@ import { fetchMessages } from '../api/messageService';
 function MessageList() {
     const [messages, setMessages] = useState<string[]>([]);
 
-    useEffect(() => {
-        const getMessages = async () => {
-            const data = await fetchMessages();
-            setMessages(data);
-        }
+    // useEffect(() => {
+    //     const getMessages = async () => {
+    //         const data = await fetchMessages();
+    //         setMessages(data);
+    //     }
         
-        getMessages();
-    }, [])
+    //     getMessages();
+    // }, [])
 
   return (
     <div>

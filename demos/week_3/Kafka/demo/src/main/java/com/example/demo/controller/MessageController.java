@@ -7,24 +7,24 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/api/messages")
-@CrossOrigin(origins = "http://localhost:3000")
+//@RestController
+//@RequestMapping("/api/messages")
+//@CrossOrigin(origins = "http://localhost:3000")
 public class MessageController {
 
-    @Autowired
-    private ProducerService producerService;
-
-    @Autowired
-    private ConsumerService consumerService;
-
-    @PostMapping
-    public void sendMessage(@RequestBody String message){
-        producerService.sendMessage(message);
-    }
-
-    @GetMapping
-    public List<String> getMessages(){
-        return consumerService.getMessages();
-    }
+//    @Autowired
+//    private ProducerService producerService;
+//
+//    @Autowired
+//    private ConsumerService consumerService;
+//
+//    @PostMapping
+//    public void sendMessage(@RequestBody String message){
+//        producerService.sendMessage(message);
+//    }
+//
+//    @GetMapping
+//    public List<String> getMessages(){
+//        return consumerService.getMessages();
+//    }
 }
