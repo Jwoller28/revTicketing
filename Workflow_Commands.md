@@ -4,5 +4,5 @@ git pull upstream main
 
 
 git add .
-git commit -m "Your commit message"
+git commit -m ""
 git push origin main 
