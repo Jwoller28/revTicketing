@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ff6bcb, #4d4dff);
+    background: linear-gradient(135deg, #ff6bcb, #504dff);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -43,7 +43,7 @@ input {
     color: #fff;
     outline: none;
     transition: border-color 0.3s ease;
-    width: 92.5%;
+    width: 95%;
 }
 
 input:focus {
@@ -60,7 +60,7 @@ button {
     color: #fff;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.3s;
-    
+    min-width: 200px;
 }
 
 button:hover {

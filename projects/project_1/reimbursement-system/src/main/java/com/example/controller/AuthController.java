@@ -24,10 +24,15 @@ public class AuthController {
         return userService.login(userData.getUsername(), userData.getPassword());
     }
     
-    // Additional endpoints for promoting users to managers can be added here.
-    // For example:
     @PatchMapping("/promote/{id}")
     public User promoteToManager(@PathVariable int id, @RequestAttribute("currentUser") User currentUser) {
         return userService.promoteToManager(id, currentUser);
     }
+
+    @GetMapping("/{userId}")
+    public User getUserById(@PathVariable int userId) {
+        return userService.findById(userId);
+    }
+
+
 }

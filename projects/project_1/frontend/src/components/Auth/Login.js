@@ -14,12 +14,14 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await loginUser({ username, password });
-            setCurrentUser(response.data);
-            localStorage.setItem("currentUser", JSON.stringify(response.data)); // Persist session
-            alert("Login successful!");
-
+            const user = response.data;
+    
+            // Save user data in localStorage
+            localStorage.setItem("currentUser", JSON.stringify(user));
+            localStorage.setItem("userId", user.id); // Explicitly store userId
+    
             // Redirect based on role
-            if (response.data.role === "MANAGER") {
+            if (user.role === "MANAGER") {
                 window.location.href = "/dashboard/manager";
             } else {
                 window.location.href = "/dashboard/employee";
@@ -29,6 +31,7 @@ const Login = () => {
             alert("Login failed. Please check your credentials.");
         }
     };
+    
 
     const handleRegisterRedirect = () => {
         navigate("/register");
