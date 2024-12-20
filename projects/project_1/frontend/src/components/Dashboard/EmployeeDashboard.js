@@ -91,6 +91,7 @@ function EmployeeDashboard() {
         <div className="dashboard-content">
             <div className="form-box">
                 <h2>Employee Dashboard</h2>
+                <h3>Submit new ticket</h3>
                 <form onSubmit={handleTicketSubmit}>
                     <input
                         type="number"
